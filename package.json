@@ -1,0 +1,17 @@
+{
+  "name": "zensurance-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "Pedro Nascimento - pedrohnsc@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^9.7.0"
+  }
+}

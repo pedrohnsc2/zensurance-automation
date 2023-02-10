@@ -1,0 +1,26 @@
+In this txt i'll describe more about the test strategy used in the API testing
+
+Test Scenario 1: API Response Validation
+
+Acceptance Criteria:
+
+-Verify that the API endpoint is accessible and returns a success status code (200).
+-Verify that the API returns the expected data format and content.
+-Verify that the API response time is within the acceptable limit (e.g., under 2 seconds).
+
+Test Scenario 2: Security Validation
+
+Acceptance Criteria:
+
+-Verify that the API endpoint uses secure communication protocols (e.g., HTTPS).
+-Verify that the API endpoint requires authentication (e.g., API key or token-based authentication).
+-Verify that the API endpoint implements proper rate limiting to prevent DDoS attacks.
+-Verify that the API endpoint implements proper input validation to prevent malicious attacks (e.g., SQL injection).
+
+Test Scenario 3: Task Automation Validation
+
+Acceptance Criteria:
+
+-Verify that tasks can be created, updated, and deleted through the API.
+-Verify that the API can retrieve task details, including task status and completion date.
+-Verify that the API can assign tasks to specific users and retrieve user information.

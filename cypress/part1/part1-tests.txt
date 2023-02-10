@@ -1,0 +1,53 @@
+This txt is to demonstrate the unit test cases the provided code in part 1 should be done
+
+1 - Test the functionality of Price class:
+
+Test that the Price class is able to initialize the price data correctly
+Test that the fee and premium values are set correctly for a Price instance
+Test that the industry value is set correctly for a Price instance
+
+2 - Test the functionality of User class:
+
+Test that the User class is able to initialize the UserData correctly
+Test that the getQuestionBank() method returns the correct IQuestionBank instance
+Test that the isBroker() method returns the correct value (true or false)
+Test that the isUser() method returns the correct value (true or false)
+
+3 - Test the functionality of PriceEngine class:
+
+Test that the getPossiblePrices() method returns the correct prices from the priceBank
+Test that the userQualifies() method returns the correct value (true or false) based on the user's answers to the question bank
+Test that the getLowestAndHighestPrices() method returns the correct values for lowestPrice and highestPrice
+Test that the getPriceForUser() method returns the correct UserPriceResult instance
+Test that the getPrice() method returns the correct UserPriceResult instance for a User and the correct BrokerPriceResult instance for a Broker.
+
+4 - Test the functionality of UserPriceResult and BrokerPriceResult:
+
+Test that the UserPriceResult is correctly set with the correct values (lowestPrice and highestPrice or NO_PRICE)
+Test that the BrokerPriceResult is correctly set with the correct values (possiblePrices, lowestPrice, and highestPrice or NO_PRICE)
+
+Edge Case scenarios for those scenarios
+
+1 - Test the behavior when there is no price in the price bank:
+Input: an instance of PriceEngine with an empty price bank
+Output: a UserPriceResult with a MissingPrice object with the description "No price selected"
+
+2 - Test the behavior when a user doesn't agree with the terms and conditions:
+Input: an instance of User with the agreesWithTermsAndConds property in the questionBank set to "no"
+Output: a UserPriceResult with a MissingPrice object with the description "No price selected"
+
+3 - Test the behavior when a user doesn't specify their agreement with the terms and conditions:
+Input: an instance of User without the agreesWithTermsAndConds property in the questionBank
+Output: a UserPriceResult with a LowestAndHighestPrices object with the calculated values for the lowest and highest prices
+
+4 - Test the behavior when a broker makes a request:
+Input: an instance of User with the role property set to "broker"
+Output: a BrokerPriceResult with a list of all the prices in the price bank and a LowestAndHighestPrices object with the calculated values for the lowest and highest prices
+
+5 - Test the behavior when a user with an industry outside of "legal" or "food" makes a request:
+Input: an instance of Price with an industry other than "legal" or "food"
+Output: a UserPriceResult with a MissingPrice object with the description "No price selected"
+
+6 - Test the behavior when a user requests prices for an industry outside of "legal" or "food":
+Input: an instance of User with a questionBank that has an industry other than "legal" or "food"
+Output: a UserPriceResult with a MissingPrice object with the description "No price selected"
